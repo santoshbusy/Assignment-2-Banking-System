@@ -1,0 +1,17 @@
+# Go build files
+bin/
+*.exe
+*.out
+
+# Environment variables
+.env
+
+# IDE files
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
