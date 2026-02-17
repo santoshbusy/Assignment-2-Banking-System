@@ -26,7 +26,7 @@ func (r *branchRepository) Create(branch *models.Branch) error {
 
 func (r *branchRepository) GetByBank(bankID uint) ([]models.Branch, error) {
 	var branches []models.Branch
-	err := r.db.Where("bank_id = ?", bankID).Find(&branches).Error
+	err := r.db.Preload("Bank").Where("bank_id = ?", bankID).Find(&branches).Error
 	return branches, err
 }
 
